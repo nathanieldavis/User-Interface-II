@@ -181,6 +181,10 @@ nav a:hover {
   transition: all 300ms ease;
 }
 
+.portfolio-card p {
+  padding: 2% 2%;
+}
+
 .portfolio-showcase .portfolio-card:hover {
   opacity: .8;
   cursor: pointer;
