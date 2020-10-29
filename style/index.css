@@ -41,18 +41,29 @@ body {
   line-height: 1.5;
 }
 
-h1 {
-  font-size: 4rem;
-  font-weight: bold;
-  color: #FFFFFF;
-  letter-spacing: -0.93px;
-}
-
 /* COMPONENTS
    ================================================ */
 header {
   padding: 3.5% 3.5%;
   background: #111112;
+}
+
+.header-gradient-text {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #FFFFFF;
+  letter-spacing: -0.93px;
+
+  /* Gradient Text */
+  background-color: #1fd1f9;
+  background-image: linear-gradient(165deg, #b621fe 20%, #1fd1f9 90%);
+  background-size: 42%;
+  background-repeat: repeat;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
 }
 
 nav {
@@ -68,7 +79,6 @@ nav a {
   font-size: 1.6rem;
   font-weight: 600;
   cursor: pointer;
-  transition: all 300ms ease;
   margin-right: 1%;
 }
 
@@ -114,7 +124,6 @@ nav a:hover {
   font-size: 1.6rem;
   font-weight: 600;
   cursor: pointer;
-  transition: all 300ms ease;
   max-width: 248px;
   align-self: middle;
   margin-bottom: 2.5%;
@@ -225,7 +234,7 @@ footer button:hover {
 @media (max-width: 768px) { 
   .portfolio-intro {
     display: grid;
-    grid-template-rows: 1fr .1fr .1fr .1fr;
+    grid-template-rows: 1fr .1fr .1fr;
     grid-template-columns: 1fr;
     padding: 2% 2%;
     grid-row-gap: 10px;
@@ -233,7 +242,6 @@ footer button:hover {
     grid-template-areas: 
     "intro_photo"
     "intro_title"
-    "intro_button"
     "into_text";
   }
   
@@ -247,8 +255,8 @@ footer button:hover {
   }
   
   .portfolio-intro a {
-    grid-area: intro_button;
     margin-bottom: 0%;
+    display: none;
   }
   
   .portfolio-intro p {
