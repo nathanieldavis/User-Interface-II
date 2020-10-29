@@ -128,3 +128,42 @@ footer button {
 footer h3 {
   text-align: center;
 }
+
+
+/* RESPONSIVE
+   ================================================ */
+
+@media (max-width: 768px) { 
+  .portfolio-intro {
+    display: grid;
+    grid-template-rows: 1fr 1fr .5fr 1fr;
+    grid-template-columns: 1fr;
+    padding: 2% 2%;
+    grid-row-gap: 10px;
+    align-items: center;
+    grid-template-areas: 
+    "intro_photo"
+    "intro_title"
+    "intro_button"
+    "into_text";
+  }
+  
+  .portfolio-intro img {
+    grid-area: intro_photo;
+  }
+  
+  .portfolio-intro h3 {
+    grid-area: intro_title;
+    border: solid 1px grey;
+  }
+  
+  .portfolio-intro button {
+    grid-area: intro_button;
+    border: solid 1px grey;
+  }
+  
+  .portfolio-intro p {
+    grid-area: into_text;
+    border: solid 1px grey;
+  }
+}
