@@ -47,6 +47,7 @@ h1 {
    ================================================ */
 header {
   padding: 4% 4%;
+  border-bottom: 2px solid black;
 }
 
 nav {
@@ -60,4 +61,10 @@ nav a {
   padding: 8px 24px;
   border: 2px solid #000;
   border-radius: 6px;
+}
+
+.portfolio-card {
+  width: 200px;
+  height: 200px;
+  background:black;
 }
