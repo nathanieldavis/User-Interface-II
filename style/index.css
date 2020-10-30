@@ -97,6 +97,11 @@ nav a:hover {
   padding: 2% 2%;
 }
 
+.wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
 .portfolio-intro img {
   grid-area: 1 / 1 / 4 / 1;
 
@@ -130,7 +135,7 @@ nav a:hover {
   text-decoration: none;
   text-align: center;
 }
-.portfolio-intro button:hover {
+.portfolio-intro a:hover {
   cursor: pointer;
   transform: scale(1.02);
   transition: background 300ms ease, transform 300ms ease, color 300ms ease;
@@ -179,10 +184,21 @@ nav a:hover {
   border-radius: 16px;
   margin: 2% 0%;
   transition: all 300ms ease;
+  /* box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.1); */
 }
 
-.portfolio-card p {
-  padding: 2% 2%;
+.portfolio-card .card-title {
+  padding: 6% 6%;
+  font-size: 18px;
+  font-weight: bold;
+  color: #0072ff;
+}
+
+.portfolio-card .card-text {
+  padding: 6% 6%;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333333;
 }
 
 .portfolio-showcase .portfolio-card:hover {
