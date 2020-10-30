@@ -1,1 +1,299 @@
-/* Add CSS styling here */
+/* RESET
+   ================================================ */
+html, body, div, span, applet, object, iframe,  
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,  
+a, abbr, acronym, address, big, cite, code,  
+del, dfn, em, img, ins, kbd, q, s, samp,  
+small, strike, strong, sub, sup, tt, var,  
+b, u, i, center,  
+dl, dt, dd, ol, ul, li,  
+fieldset, form, label, legend,  
+table, caption, tbody, tfoot, thead, tr, th, td,  
+article, aside, canvas, details, embed,  
+figure, figcaption, footer, header, hgroup,  
+menu, nav, output, ruby, section, summary,  
+time, mark, audio, video {  
+margin: 0;  
+padding: 0;  
+border: 0;  
+font-size: 100%;  
+font: inherit;  
+vertical-align: baseline;  
+}
+
+/* Removes default browser button styles */
+input, button, submit { border:none; }
+
+/* TYPOGRAPHY SETUP
+   ================================================ */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+/* COMPONENTS
+   ================================================ */
+header {
+  padding: 3.5% 3.5%;
+  background: #111112;
+}
+
+.header-gradient-text {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #FFFFFF;
+  letter-spacing: -0.93px;
+
+  /* Gradient Text */
+  background-color: #1fd1f9;
+  background-image: linear-gradient(165deg, #b621fe 20%, #1fd1f9 90%);
+  background-size: 42%;
+  background-repeat: repeat;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+nav {
+  margin-top: 2%;
+}
+
+nav a {
+  text-decoration: none;
+  padding: 16px 24px;
+  background: #1E1E1E;
+  color: #919192;
+  border-radius: 7px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-right: 1%;
+}
+
+nav a:hover {
+  background: rgba(0, 114, 255, 0.1);
+  color: #0072ff;
+  cursor: pointer;
+  transition: background 300ms ease, transform 300ms ease, color 300ms ease;
+}
+
+.portfolio-intro {
+  display: grid;
+  grid-column-gap: 24px;
+  grid-template-rows: 1fr .2fr .2fr;
+  grid-template-columns: 1fr 1fr;
+  padding: 2% 2%;
+}
+
+.wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.portfolio-intro img {
+  grid-area: 1 / 1 / 4 / 1;
+
+  max-width: 58rem;
+  width: 100%;
+  border-radius: 16px;
+}
+
+.portfolio-intro h3 {
+  grid-area: 1 / 2 / 1 / 2;
+  font-size: 60px;
+  color: #171D29;
+  letter-spacing: -0.93px;
+  font-weight: bold;
+  align-self: end;
+}
+
+.portfolio-intro a {
+  grid-area: 2 / 2 / 2 / 2;
+
+  background: rgba(0, 114, 255, 0.1);
+  color: #0072ff;
+  border-radius: 7px;
+  padding: 20px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  cursor: pointer;
+  max-width: 248px;
+  align-self: middle;
+  margin-bottom: 2.5%;
+  text-decoration: none;
+  text-align: center;
+}
+.portfolio-intro a:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+  transition: background 300ms ease, transform 300ms ease, color 300ms ease;
+}
+
+.portfolio-intro p {
+  grid-area: 3 / 2 / 3 / 2;
+
+  font-size: 20px;
+  color: #81858B;
+  letter-spacing: -0.15px;
+  line-height: 29px;
+  font-weight: 400;
+  align-self: middle;
+}
+
+/* .portfolio-showcase {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 2% 2%;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.portfolio-showcase .portfolio-card {
+  display: flex;
+  flex-direction: column;
+  margin: 1% 1%;
+  border-radius: 4px;
+  border: 1px solid #000;
+  min-height: 4%;
+} */
+
+.portfolio-showcase {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-between;
+  padding: 2% 2%;
+}
+
+.portfolio-showcase .portfolio-card {
+  height: 28rem;
+  width: 28rem;
+  background-color: #F0F0F0;
+  border-radius: 16px;
+  margin: 2% 0%;
+  transition: all 300ms ease;
+  /* box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.1); */
+}
+
+.portfolio-card .card-title {
+  padding: 6% 6%;
+  font-size: 18px;
+  font-weight: bold;
+  color: #0072ff;
+}
+
+.portfolio-card .card-text {
+  padding: 6% 6%;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333333;
+}
+
+.portfolio-showcase .portfolio-card:hover {
+  opacity: .8;
+  cursor: pointer;
+  transform: scale(1.01);
+  transition: all 300ms ease;
+}
+
+
+footer {
+  background: #111112;
+  padding: 8% 0;
+}
+
+footer div {
+  display: flex;
+  flex-direction: column;
+}
+
+footer h3 {
+  text-align: center;
+  color: white;
+  font-size: 3.2rem;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+footer button {
+  min-width: 380px;
+  background: #1E1E1E;
+  color: #919192;
+  border-radius: 7px;
+  padding: 20px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  align-self: center;
+  margin-top: 16px;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+
+footer button:hover {
+  background: rgba(0, 114, 255, 0.1);
+  color: #0072ff;
+  cursor: pointer;
+  transform: scale(1.02);
+  transition: background 300ms ease, transform 300ms ease, color 300ms ease;
+}
+
+/* RESPONSIVE
+   ================================================ */
+@media (max-width: 768px) { 
+  .portfolio-intro {
+    display: grid;
+    grid-template-rows: 1fr .1fr .1fr;
+    grid-template-columns: 1fr;
+    padding: 2% 2%;
+    grid-row-gap: 10px;
+    align-items: center;
+    grid-template-areas: 
+    "intro_photo"
+    "intro_title"
+    "into_text";
+  }
+  
+  .portfolio-intro img {
+    grid-area: intro_photo;
+    max-width: none;
+  }
+  
+  .portfolio-intro h3 {
+    grid-area: intro_title;
+  }
+  
+  .portfolio-intro a {
+    margin-bottom: 0%;
+    display: none;
+  }
+  
+  .portfolio-intro p {
+    grid-area: into_text;
+  }
+}
+
+
+@media (max-width: 580px) { 
+  .portfolio-showcase {
+    justify-content: center;
+  }
+  .portfolio-showcase .portfolio-card {
+    padding: 0% 0%;
+    width: 100vh;
+  }
+  nav {
+    margin-bottom: 2%;
+  }
+}
